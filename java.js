@@ -1,17 +1,24 @@
-for (let i = 1000; i >= 0; i -= 2) {
-    console.log(i);
-}
-for (let i = 0; i <= 10000; i++) {
-    if (i === 2500) {
-        alert("A quarter of the way there!");
-    } else if (i === 5000) {
-        alert("Halfway there!");
-    } else if (i === 10000) {
-        alert("The loop is done!");
-    }
-}
-var favoriteShows = ["The Mandalorian", "WandaVision", "Daredevil", "Masters of the Air", "For All Mankind"];
 
-for (let i = 0; i < favoriteShows.length; i++) {
-    console.log("My #" + (i+1) + " favorite TV show is " + favoriteShows[i]);
+function firstLetterName(name) {
+    alert("The name " + name + " starts with the letter " + name[0]);
 }
+
+
+function divisibleByTwo(number) {
+    return number % 2 === 0;
+}
+
+
+function largestNum(arr) {
+    let largest = arr[0];
+    for(let i = 1; i < arr.length; i++) {
+        if(arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+
+firstLetterName("Elijah");
+console.log(divisibleByTwo(10));
+console.log(largestNum([1, 20, 4, 7, 5]));
